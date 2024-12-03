@@ -3,7 +3,7 @@ open Std.Internal.Parsec.String
 
 namespace DayOne
 
-private def dayOneFile : String := "Aoc2024/d1.txt"
+private def input : String := "Aoc2024/d1.txt"
 
 def parse : Parser (Nat × Nat) := do
   let left <- Utils.stringToNat
@@ -12,7 +12,7 @@ def parse : Parser (Nat × Nat) := do
   pure (left, right)
 
 def readToListTuple : IO (List Nat × List Nat) := do
-  let lines <- Utils.readLines dayOneFile
+  let lines <- Utils.readLines input
   let parsedLines <- lines.mapM (fun line => IO.ofExcept (parse.run line))
   pure parsedLines.unzip
 

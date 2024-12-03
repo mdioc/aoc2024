@@ -4,6 +4,8 @@ open Utils
 def runAocPart : Option Utils.AocPart -> IO Nat
   | some Utils.AocPart.dayOnePartOne => DayOne.partOne
   | some Utils.AocPart.dayOnePartTwo => DayOne.partTwo
+  | some Utils.AocPart.dayTwoPartOne => DayTwo.partOne
+  | some Utils.AocPart.dayTwoPartTwo => DayTwo.partTwo
   | none => pure 0
 
 def main : IO Unit := do

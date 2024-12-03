@@ -7,10 +7,14 @@ namespace Utils
 inductive AocPart where 
   | dayOnePartOne
   | dayOnePartTwo
+  | dayTwoPartOne
+  | dayTwoPartTwo
 
 def parseAocPart : String -> Option AocPart 
   | "d1p1" => some AocPart.dayOnePartOne
   | "d1p2" => some AocPart.dayOnePartTwo
+  | "d2p1" => some AocPart.dayTwoPartOne
+  | "d2p2" => some AocPart.dayTwoPartTwo
   | _ => none
 
 def getInput : IO String := do
