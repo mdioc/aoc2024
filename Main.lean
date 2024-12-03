@@ -1,5 +1,4 @@
 import Aoc2024
-open Utils
 
 def runAocPart : Option Utils.AocPart -> IO Nat
   | some Utils.AocPart.dayOnePartOne => DayOne.partOne
