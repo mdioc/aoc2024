@@ -1,0 +1,21 @@
+name = "aoc2024"
+version = "0.1.0"
+defaultTargets = ["aoc2024"]
+
+[[require]]
+name = "batteries"
+scope = "leanprover-community"
+rev = "main"
+
+#[[require]]
+#name = "mathlib"
+#git = "https://github.com/leanprover-community/mathlib4.git"
+#scope = "leanprover-community"
+#rev = "master"
+
+[[lean_lib]]
+name = "Aoc2024"
+
+[[lean_exe]]
+name = "aoc2024"
+root = "Main"
